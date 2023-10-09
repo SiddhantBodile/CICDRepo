@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     
@@ -12,8 +11,11 @@ pipeline {
         
         stage('Build and Run') {
             steps {
-                // Install Node.js and run the TypeScript project
-                sh 'npx ts-node src/index.ts'
+                // Change working directory to where your code is located
+                dir('/var/www/html/') {
+                    // Install Node.js and run the TypeScript project
+                    sh 'npx ts-node src/index.ts'
+                }
             }
         }
     }
@@ -27,3 +29,4 @@ pipeline {
         }
     }
 }
+
