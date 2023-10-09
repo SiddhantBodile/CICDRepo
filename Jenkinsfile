@@ -1,11 +1,12 @@
+
 pipeline {
     agent any
     
     stages {
         stage('Checkout') {
             steps {
-                // Checkout your code from the Git repository
-                checkout scm
+                // Checkout your code from the Git repository for the 'main' branch
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '13.234.196.146', url: 'https://github.com/SiddhantBodile/CICDRepo.git']]])
             }
         }
         
