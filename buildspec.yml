@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18  # Use the Node.js version you need
+    commands:
+      - npm install  # Install project dependencies
+
+  build:
+    commands:
+      - node src/index.ts  # Replace with your build command if applicable
+
+artifacts:
+  files:
+    - '**/*'  # Include all files in the build artifacts
+  discard-paths: yes
