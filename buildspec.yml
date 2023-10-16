@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       nodejs: 18  # Change this to your Node.js version
     commands:
-      - npm install pm2
+      - npm install pm2 -g
 
   pre_build:
     commands:
