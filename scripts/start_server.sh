@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change to your application directory
-cd /var/www/nodeproject/
+cd /var/www/html/
 
 # Install pm2 globally
 npm install pm2
