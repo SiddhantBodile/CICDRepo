@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change to your application directory
-cd /var/www/nodeproject/
+cd /var/www/html/
 
 # Stop your Node.js application using pm2
 pm2 stop nodejs-app || true
