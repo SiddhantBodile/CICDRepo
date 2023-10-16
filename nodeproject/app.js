@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     </head>
     <body>
       <div class="container">
-        <h1>Welcome to Siddhant Bodile's DevOps Learning Page</h1>
+        <h1>Welcome to DevOps Learning Page</h1>
         <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the software development life cycle and provide continuous delivery with high software quality. Basic DevOps technologies include:</p>
         <ul>
           <li>Version Control (e.g., Git)</li>
