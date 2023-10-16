@@ -3,15 +3,21 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 16  # Use the Node.js version you need
+      nodejs: 18  # Change this to your Node.js version
     commands:
-      - npm install  # Install project dependencies
+      - npm install -g pm2
+
+  pre_build:
+    commands:
+      - pm2 stop nodejs-app || true
+      - pm2 delete nodejs-app || true
+      - pm2 start app.js --name nodejs-app
 
   build:
     commands:
-      - node src/index.ts  # Replace with your build command if applicable
+      - echo "Build started"
 
-artifacts:
-  files:
-    - '**/*'  # Include all files in the build artifacts
-  discard-paths: yes
+  post_build:
+    commands:
+      - pm2 save
+
